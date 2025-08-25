@@ -1,0 +1,95 @@
+/* =======================
+   Base styles
+======================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav .nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+nav .nav-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+/* =======================
+   Grid Section
+======================= */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* =======================
+   Media Queries
+======================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  footer {
+    text-align: center;
+  }
+
+  nav .nav-list {
+    align-items: center;
+  }
+}
